@@ -16,6 +16,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import RoughToolbar from './Toolbar';
 
 const drawerWidth = 240;
 
@@ -111,6 +112,7 @@ export default function ResponsiveDrawer(props) {
           <Typography variant="h6" noWrap>
             Responsive drawer
           </Typography>
+          <RoughToolbar />
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="Mailbox folders">
