@@ -33,17 +33,25 @@ const useStyles = makeStyles(theme => ({
     marginLeft: drawerWidth,
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`
-    }
+    },
+    background: `linear-gradient(to right, #7abcff 0%,#60abf8 44%,#4096ee 100%)`
   },
   menuButton: {
     marginRight: theme.spacing(2),
     [theme.breakpoints.up('sm')]: {
       display: 'none'
+    },
+    background: `linear-gradient(to right, #7abcff 0%,#60abf8 44%,#4096ee 100%)`
+  },
+  toolbar: {
+    ...theme.mixins.toolbar,
+    ...{
+      // background: `linear-gradient(to right, #7abcff 0%,#60abf8 44%,#4096ee 100%)`
     }
   },
-  toolbar: theme.mixins.toolbar,
   drawerPaper: {
-    width: drawerWidth
+    width: drawerWidth,
+    background: `linear-gradient(to right, #7abcff 0%,#60abf8 44%,#4096ee 100%)`
   },
   content: {
     flexGrow: 1,
@@ -97,22 +105,22 @@ export default function ResponsiveDrawer(props) {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar position="fixed" className={classes.appBar}>
+      {/* <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <IconButton
-            color="inherit"
-            aria-label="Open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            className={classes.menuButton}
+        color="inherit"
+        aria-label="Open drawer"
+        edge="start"
+        onClick={handleDrawerToggle}
+        className={classes.menuButton}
           >
-            <MenuIcon />
+        <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Responsive drawer
+        Responsive drawer
           </Typography>
         </Toolbar>
-      </AppBar>
+      </AppBar> */}
       <nav className={classes.drawer} aria-label="Mailbox folders">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation="css">
